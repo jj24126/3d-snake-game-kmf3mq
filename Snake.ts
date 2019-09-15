@@ -18,10 +18,37 @@ class Snake{
     else if(this.currentDirection === -1) {this.currentDirection = 1}
   }
 
+  public turnLeft(){
+
+  }
+
+  public turnRight(){
+    
+  }
+
   public get position(){
     return this.currentPosition
   }
 }
+
+class Point{
+  private xcoord:number
+  private ycoord:number
+  constructor(){
+    this.xcoord = 0
+    this.ycoord = 0
+  }
+
+  public get xcor(){
+    return this.xcoord
+  }
+
+  public get ycor(){
+    return this.ycoord
+  }
+}
+
+
 
 
 export default Snake;

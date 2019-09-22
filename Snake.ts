@@ -6,7 +6,7 @@ class Snake{
   private currentPosition:number
   private currentDirection:number
    constructor(){
-    this.currentPosition = 0
+    this.currentPosition = new Point()
     this.currentDirection = 1
   }
   public move(numMoves:number){
@@ -32,8 +32,8 @@ class Snake{
 }
 
 class Point{
-  private xcoord:number
-  private ycoord:number
+  public xcoord:number
+  public ycoord:number
   constructor(){
     this.xcoord = 0
     this.ycoord = 0

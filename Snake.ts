@@ -31,24 +31,5 @@ class Snake{
   }
 }
 
-class Point{
-  public xcoord:number
-  public ycoord:number
-  constructor(){
-    this.xcoord = 0
-    this.ycoord = 0
-  }
-
-  public get xcor(){
-    return this.xcoord
-  }
-
-  public get ycor(){
-    return this.ycoord
-  }
-}
-
-
-
 
 export default Snake;

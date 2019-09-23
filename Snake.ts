@@ -1,12 +1,14 @@
+
 import display from './display';
+import Point from './Point';
 
 // place your code on line 5 above the export statement below
 
 class Snake{
-  private currentPosition:number
+  private currentPosition:Point
   private currentDirection:number
    constructor(){
-    this.currentPosition = new Point()
+    this.currentPosition = new Point(0,0)
     this.currentDirection = 1
   }
   public move(numMoves:number){

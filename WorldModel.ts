@@ -9,7 +9,8 @@ class WorldModel{
   }
 
   public update(steps){
-
+    this.snk.move(steps)
+    this.snk.position
   }
 }
 

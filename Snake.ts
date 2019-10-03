@@ -1,4 +1,3 @@
-
 import display from './display';
 import Point from './Point';
 
@@ -34,6 +33,10 @@ class Snake{
 
   public get position(){
     return this.currentPosition
+  }
+
+  public get direction(){
+    return this.currentDirection
   }
 }
 

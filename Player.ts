@@ -1,6 +1,6 @@
 import SnakeController from './SnakeController'
 
-class Player{
+abstract class Player{
   private sc:SnakeController
 
   constructor(snkCont:SnakeController){

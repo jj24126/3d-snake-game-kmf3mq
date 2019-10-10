@@ -1,12 +1,17 @@
 import SnakeController from './SnakeController'
+
 class Player{
   private sc:SnakeController
 
-  constructor(snkcont:SnakeController){
-    this.sc = snkcont
+  constructor(snkCont:SnakeController){
+    this.sc = snkCont
   }
 
-  private makeTurn(){}
+  private makeTurn(){
+    
+  }
 
 
 }
+
+export default Player;

@@ -1,8 +1,7 @@
 
+interface IView  {
 
-interface IView <T> {
-
-  display: T; 
+  display:() => void; 
 }
 
 export default IView;

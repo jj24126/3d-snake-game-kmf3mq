@@ -13,7 +13,8 @@ class CanvasView implements IView{
   }
 
   private display(w:WorldModel){
-    this.canvas = w.widthgetter * v 
+    this.canvas.width = w.widthgetter * v 
+    this.canvas.height = w.heightgetter * v
 
   }
 

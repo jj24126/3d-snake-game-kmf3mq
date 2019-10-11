@@ -7,11 +7,7 @@ abstract class Player{
     this.sc = snkCont
   }
 
-  private makeTurn(){
-    
-  }
-
-
+  abstract makeTurn:() => void;
 }
 
 export default Player;

@@ -5,8 +5,7 @@ class AvoidWallsPlayer extends Player{
   constructor(){
     super()
   }
-
- private makeTurn(){
+    makeTurn(){
    
   }
 

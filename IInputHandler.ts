@@ -17,8 +17,8 @@ interface IInputHandler{
   resetRightMove:(){
 
   }
-
-
-
-
 }
+
+ export default IInputHandler;
+
+

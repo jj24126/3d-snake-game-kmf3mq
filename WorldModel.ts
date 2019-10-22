@@ -29,6 +29,10 @@ class WorldModel{
   public get heightgetter(){
     return this.height 
   } 
+
+  public set View (){
+
+  }
 }
 
 

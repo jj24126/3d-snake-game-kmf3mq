@@ -1,7 +1,9 @@
 
+
+import WorldModel from './WorldModel'
 interface IView  {
 
-  display:() => void; 
+  display:(w:WorldModel) => void; 
 }
 
 export default IView;

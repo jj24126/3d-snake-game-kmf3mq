@@ -2,6 +2,8 @@ import IView from './IView'
 import WorldModel from './WorldModel'
 
 
+
+
 class CanvasView implements IView{
   private canvas:HTMLCanvasElement
   private context:CanvasRenderingContext2D
@@ -18,7 +20,7 @@ class CanvasView implements IView{
   private display(w:WorldModel){
     this.canvas.width = w.widthgetter * this.sf
     this.canvas.height = w.heightgetter * this.sf
-  
+    
   }
 
 }

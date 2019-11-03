@@ -1,5 +1,7 @@
 
-
+/**
+ * Interface for input handler
+ */
 interface IInputHandler{
 
   madeLeftMove:(){

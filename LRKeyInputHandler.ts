@@ -7,4 +7,4 @@ class LRKeyInputHandler implements IInputHandler{
   constructor(){
     this.wasLeftArrowPushed = false
     this.wasRightArrowPushed = false 
-  }
+  } 

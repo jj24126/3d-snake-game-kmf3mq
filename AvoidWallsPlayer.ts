@@ -14,6 +14,7 @@ class AvoidWallsPlayer extends Player{
      * Calls turnSnakeLeft / turnSnakeRight on sc, to avoid crashing into * the wall.
      */
     makeTurn(){
+      
    
   }
 

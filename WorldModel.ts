@@ -47,9 +47,7 @@ class WorldModel{
     return this.height 
   } 
 
-  public set View (){
-
-  }
+  
 }
 
 

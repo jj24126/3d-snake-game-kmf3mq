@@ -2,7 +2,7 @@ import SnakeController from './SnakeController'
 
 /** Player class */
 abstract class Player{
-  private sc:SnakeController
+  protected sc:SnakeController
   /**
    * Creates an instance of the player class
    * @param snkCont - The snake controller class.
@@ -14,7 +14,7 @@ abstract class Player{
     /** 
      * Calls turnSnakeLeft / turnSnakeRight on sc, to avoid crashing into * the wall.
      */
-  abstract makeTurn:() => void;
+  abstract makeTurn(): void;
 }
 
 export default Player;

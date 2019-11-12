@@ -16,7 +16,7 @@ class AvoidWallsPlayer extends Player{
      */
     makeTurn(){
       
-      if(this.sc.)
+      if(this.sc.snakeDirection === 0 && this.sc.snakePosition === this.sc.worldHeight - 1
       
    
   }

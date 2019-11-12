@@ -3,8 +3,8 @@ import Snake from './Snake'
 /**World Model Class */
 class WorldModel{
   private snk:Snake
-  private width
-  private height
+  private width:number
+  private height:number
   private view
 /**
  * Creates a new World Model

@@ -12,7 +12,7 @@ class AvoidWallsPlayer extends Player{
   }
 
     /** 
-     * Calls turnSnakeLeft / turnSnakeRight on sc, to avoid crashing into * the wall.
+     * Calls turnSnakeLeft / turnSnakeRight on sc, to avoid crashing into  the wall.
      */
     makeTurn(){
        if(this.sc.snakeDirection === 0 && this.sc.snakePosition.y===0 && this.sc.snakePosition.x <= this.sc.worldWidth()/2)                                                                                                  {this.sc.turnSnakeRight()}  

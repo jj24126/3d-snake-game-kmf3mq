@@ -18,16 +18,16 @@ class SnakeController{
   /**
    * Calls turn left on slitherer.
    */
-  private turnSnakeLeft(){
-    this.slitherer.turnLeft
+  public turnSnakeLeft(){
+    this.slitherer.turnLeft()
 
   }
 
   /** 
    * Calls turn right on slitherer.
    */
-  private turnSnakeRight(){
-    this.slitherer.turnRight
+  public turnSnakeRight(){
+    this.slitherer.turnRight()
   }
 
   /**

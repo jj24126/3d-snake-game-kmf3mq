@@ -23,9 +23,10 @@ class CanvasView implements IView{
    * Displays the view
    * @param w - Represents the world model class.
    */
-  private display(w:WorldModel){
+  public display(w:WorldModel){
     this.canvas.width = w.widthgetter * this.sf
     this.canvas.height = w.heightgetter * this.sf
+    this.context.fillRect()
     
   }
 

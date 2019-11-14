@@ -35,28 +35,28 @@ class SnakeController{
    */
 
   public get snakePosition(){
-    return this.slitherer.position
+    return this.slitherer.position()
   }
 
   /**
    * Gets slitherer's direction.
    */
   public get snakeDirection(){
-    return this.slitherer.direction
+    return this.slitherer.direction()
   }
 
   /**
    * Gets the world's width.
    */
   public get worldWidth(){
-    return this.snakeWorld.widthgetter
+    return this.snakeWorld.widthgetter()
   }
 
   /**
    * Gets the world's height.
    */
   public worldHeight(){
-    return this.snakeWorld.heightgetter
+    return this.snakeWorld.heightgetter()
   }
 }
 

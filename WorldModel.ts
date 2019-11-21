@@ -35,7 +35,7 @@ class WorldModel{
   /**
    * Gets the width.
    */
-  public get widthgetter(){
+  public get currentWidth(){
     return this.width
   }
 
@@ -43,7 +43,7 @@ class WorldModel{
    * Gets the height.
    */
 
-  public get heightgetter(){
+  public get currentHeight(){
     return this.height 
   } 
 

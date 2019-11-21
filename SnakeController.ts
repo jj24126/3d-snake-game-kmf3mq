@@ -49,14 +49,14 @@ class SnakeController{
    * Gets the world's width.
    */
   public get worldWidth(){
-    return this.snakeWorld.widthgetter()
+    return this.snakeWorld.currentWidth()
   }
 
   /**
    * Gets the world's height.
    */
   public worldHeight(){
-    return this.snakeWorld.heightgetter()
+    return this.snakeWorld.currentHeight()
   }
 }
 

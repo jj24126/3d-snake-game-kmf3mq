@@ -49,7 +49,7 @@ class WorldModel{
   } 
 
   public set View(v:this.view){
-    this.view = this.view
+    this.view = v
 
   }
 

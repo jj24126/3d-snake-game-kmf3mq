@@ -1,5 +1,5 @@
 import Snake from './Snake'
-
+import display from './display'
 /**World Model Class */
 class WorldModel{
   private snk:Snake
@@ -23,6 +23,7 @@ class WorldModel{
    */
   public update(steps){
     this.snk.move(steps)
+    if(this.view !== null) {display (this.view)}
   }
 
   /**
@@ -46,6 +47,11 @@ class WorldModel{
   public get currentHeight(){
     return this.height 
   } 
+
+  public set View(v:this.view){
+    this.view = this.view
+
+  }
 
   
 }

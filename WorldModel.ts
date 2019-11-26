@@ -1,11 +1,11 @@
 import Snake from './Snake'
-import display from './display'
+import IView from './IView'
 /**World Model Class */
 class WorldModel{
   private snk:Snake
   private width:number
   private height:number
-  private view
+  private myView:IView | null
 /**
  * Creates a new World Model
  * @param s - Represents the snake class
@@ -14,7 +14,7 @@ class WorldModel{
     this.snk = s
     this.width = 
     this.height = 
-    this.view = null
+    this.myView= null
   }
 
   /**
@@ -23,7 +23,7 @@ class WorldModel{
    */
   public update(steps){
     this.snk.move(steps)
-    if(this.view !== null) {display (this.view)}
+    if(this.myView !== null) {this.myView.display(this)}
   }
 
   /**
@@ -48,8 +48,8 @@ class WorldModel{
     return this.height 
   } 
 
-  public set View(v:this.view){
-    this.view = v
+  public set View(v:IView){
+    this.myView = v
 
   }
 

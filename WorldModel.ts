@@ -48,6 +48,8 @@ class WorldModel{
     return this.height 
   } 
 
+
+
   public set View(v:IView){
     this.myView = v
 

@@ -12,8 +12,8 @@ class WorldModel{
  */
  constructor(s:Snake){
     this.snk = s
-    this.width = 
-    this.height = 
+    this.width = 10
+    this.height = 10
     this.myView= null
   }
 
@@ -43,13 +43,14 @@ class WorldModel{
   /**
    * Gets the height.
    */
-
   public get currentHeight(){
     return this.height 
   } 
 
-
-
+  /**
+   *  Sets the View to the one that is passed.
+   * @param v -The view to set it to
+   */
   public set View(v:IView){
     this.myView = v
 

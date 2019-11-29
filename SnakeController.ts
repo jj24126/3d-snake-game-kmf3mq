@@ -55,7 +55,7 @@ class SnakeController{
   /**
    * Gets the world's height.
    */
-  public worldHeight(){
+  public get worldHeight(){
     return this.snakeWorld.currentHeight()
   }
 }

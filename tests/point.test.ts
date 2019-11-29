@@ -1,4 +1,4 @@
-import Point from './Point'
+import Point from '../Point'
 
 describe("Point", function(){
   it("has working getter for y", function(){

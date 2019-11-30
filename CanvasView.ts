@@ -7,7 +7,7 @@ import WorldModel from './WorldModel'
 class CanvasView implements IView{
   private canvas:HTMLCanvasElement
   private context:CanvasRenderingContext2D
-  private sf: number
+  public sf: number
   /**
    * Creates an instance of the canvas view class
    * @param sf - A number used as a scaling factor.

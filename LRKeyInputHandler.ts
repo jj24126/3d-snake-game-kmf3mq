@@ -1,4 +1,4 @@
-
+import IInputHandler from './IInputHandler'
 
 
 class LRKeyInputHandler implements IInputHandler{
@@ -9,11 +9,11 @@ class LRKeyInputHandler implements IInputHandler{
     this.wasLeftArrowPushed = false
     this.wasRightArrowPushed = false;
 
-    (event) => {
+    window.addEventListener("keydown", (event) => {
       if(event.key === "ArrowLeft") {this.wasLeftArrowPushed = true}
 
       else if(event.key === "ArrowRight") {this.wasRightArrowPushed = true}
-    }
+    })
   }
 
   public madeLeftMove(){

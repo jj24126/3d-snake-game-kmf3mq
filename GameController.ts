@@ -13,16 +13,14 @@ class GameController{
   public run(){
     let lastTime = 0
 
-    const updateFrame =()=> {
+    const updateFrame =(milliseconds)=> {
       this.player1.makeTurn()
       this.player2.makeTurn()
       requestAnimationFrame(updateFrame);
+      if((milliseconds - lastTime) > 250) {this.world.update(1)
+                                           lastTime = lastTime + 250}
     }
-    if(requestAnimationFrame(updateFrame) > 250) {this.world.update(1)
-                                                  lastTime = lastTime + 250}
-                                                  
-      requestAnimationFrame(updateFrame)
-
+    requestAnimationFrame(updateFrame)
   }
 
   /*public updateFrame(){

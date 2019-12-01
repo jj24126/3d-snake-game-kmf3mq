@@ -31,9 +31,6 @@ class LRKeyInputHandler implements IInputHandler{
   public resetRightMove(){
     this.wasRightArrowPushed = false
   }
-
-
-
-
-  
 }
+
+export default LRKeyInputHandler;

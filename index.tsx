@@ -5,6 +5,7 @@ import './style.css';
 import display from './display';
 import Snake from './Snake';
 import SnakeTests from './SnakeTests';
+import WorldModel from './WorldModel'
 
 interface AppProps { }
 interface AppState {
@@ -44,3 +45,11 @@ render(<App />, document.getElementById('root'));
 
 // Add display statements below
 display("Let's get started with React TypeScript!");
+
+const s = new Snake()
+display(s.position.x)
+const wm = new WorldModel(s)
+wm.update(1)
+s.turnLeft
+wm.update(1)
+display(s.position.x)

@@ -13,10 +13,10 @@ class HumanPlayer extends Player{
   }
 
   public makeTurn(){
-    if(this.handler.madeLeftMove === true) {this.controller.turnSnakeLeft()
-                                            this.handler.resetLeftMove() }
-    else if(this.handler.madeRightMove === true) {this.controller.turnSnakeRight()
-                                                  this.handler.resetRightMove()}
+    if(this.handler.madeLeftMove) {this.controller.turnSnakeLeft()
+                                   this.handler.resetLeftMove() }
+    else if(this.handler.madeRightMove) {this.controller.turnSnakeRight()
+                                         this.handler.resetRightMove()}
   }
 
 }

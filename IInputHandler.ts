@@ -5,22 +5,22 @@
 
 interface IInputHandler {
 
-  madeLeftMove(){
+  madeLeftMove:() => void
 
-  }
+  
 
 
-  madeRightMove(){
+  madeRightMove:() => void 
 
-  }
+  
 
-  resetLeftMove(){
+  resetLeftMove:() => void
 
-  }
+  
 
-  resetRightMove(){
+  resetRightMove:() => void
     
-  }
-
-
+  
 }
+
+export default IInputHandler;

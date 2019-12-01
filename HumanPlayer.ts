@@ -1,12 +1,12 @@
 
 import Player from './Player'
 import SnakeController from './SnakeController'
-import IInputHandler from './IInputHandler'
+import LRKeyInputHandler from './LRKeyInputHandler'
 
 class HumanPlayer extends Player{
-  private controller
-  private handler
-  constructor(sc:SnakeController, ih:IInputHandler){
+  private controller:SnakeController
+  private handler:LRKeyInputHandler
+  constructor(sc:SnakeController, ih:LRKeyInputHandler){
     super(sc)
     this.controller = sc 
     this.handler = ih
@@ -15,7 +15,7 @@ class HumanPlayer extends Player{
   public makeTurn(){
     if(this.handler.madeLeftMove === true) {this.controller.turnSnakeLeft()
                                             this.handler.resetLeftMove() }
-    else if(this.handler.madeRightMove === true) {this.controller.turnSnakeright()
+    else if(this.handler.madeRightMove === true) {this.controller.turnSnakeRight()
                                                   this.handler.resetRightMove()}
   }
 

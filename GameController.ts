@@ -14,7 +14,7 @@ class GameController{
     const lastTime = 0
 
     if(requestAnimationFrame(this.run) > 250) {this.world.update(1)
-                                               const lastTime = 250} 
+                                                lastTime + 250} 
     requestAnimationFrame(this.run)      
   }
 

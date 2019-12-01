@@ -12,9 +12,9 @@ class WorldModel{
  */
  constructor(s:Snake){
     this.snk = s
-    this.width = 10
-    this.height = 10
-    this.myView= null
+    this.width = 40
+    this.height = 40
+    this.myView = null
   }
 
   /**

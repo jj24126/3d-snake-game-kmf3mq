@@ -6,6 +6,7 @@ import display from './display';
 import Snake from './Snake';
 import SnakeTests from './SnakeTests';
 import WorldModel from './WorldModel'
+import CanvasView from './CanvasView'
 
 interface AppProps { }
 interface AppState {
@@ -53,3 +54,9 @@ wm.update(1)
 s.turnLeft
 wm.update(1)
 display(s.position.x)
+
+const cv = new CanvasView(40)
+wm.View = cv
+wm.update(1)
+
+

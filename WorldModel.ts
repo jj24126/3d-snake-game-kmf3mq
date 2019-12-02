@@ -2,19 +2,24 @@ import Snake from './Snake'
 import IView from './IView'
 /**World Model Class */
 class WorldModel{
-  private snk:Snake
+ // private snk:Snake
+  private allSnakes
   private width:number
   private height:number
-  private myView:IView | null
+  private allViews
+  //private myView:IView | null
+  
 /**
  * Creates a new World Model
  * @param s - Represents the snake class
  */
- constructor(s:Snake){
-    this.snk = s
+ constructor(/*s:Snake*/){
+    //this.snk = s
+    this.allSnakes = []
     this.width = 40
     this.height = 40
-    this.myView = null
+    this.allViews = []
+    //this.myView = null
   }
 
   /**
@@ -22,15 +27,12 @@ class WorldModel{
    * @param steps - Retrieve's the snake.
    */
   public update(steps){
-    this.snk.move(steps)
-    if(this.myView !== null) {this.myView.display(this)}
+    this.allSnakes.move(steps)
+    if(this.allViews !== null) {this.allViews.display(this)}
   }
 
-  /**
-   * Gets the snake.
-   */
-  public get snake(){
-    return this.snk
+  public get allSnks() {
+    return this.allSnakes
   }
 
   /**
@@ -47,14 +49,19 @@ class WorldModel{
     return this.height 
   } 
 
-  /**
-   *  Sets the View to the one that is passed.
-   * @param v -The view to set it to
-   */
-  public set View(v:IView){
+  public addSnakes(s) {
+    this.allSnakes.push(s)
+  }
+
+  public addView(v) {
+    this.allViews.push(v)
+  }
+
+
+ /* public set View(v:IView){
     this.myView = v
 
-  }
+  }*/
 
   
 }

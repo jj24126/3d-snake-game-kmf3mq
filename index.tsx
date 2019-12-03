@@ -49,14 +49,14 @@ display("Let's get started with React TypeScript!");
 
 const s = new Snake()
 display(s.position.x)
-const wm = new WorldModel(s)
+const wm = new WorldModel()
 wm.update(1)
 s.turnLeft
 wm.update(1)
 display(s.position.x)
 
 const cv = new CanvasView(40)
-wm.View = cv
+wm.addView = cv
 wm.update(1)
 
 

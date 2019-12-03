@@ -5,14 +5,18 @@ import Point from './Point';
 
 /**Class representing a Snake */
 class Snake{
-  private currentPosition:Point
+  private currentParts
   private currentDirection:number
   /**
    * Creates a Snake
    */
-   constructor(){
-    this.currentPosition = new Point(0,0)
+   constructor(startPosition:Point, size){
+    this.currentParts = [startPosition]
     this.currentDirection = 1
+    let b
+    for (b=1; b < this.currentParts.size - 1; b++) {
+      this.currentParts.push(new Point(startPosition.x - b, startPosition.y));
+    }
   }
 
   /**
@@ -20,10 +24,10 @@ class Snake{
    * @param numMoves -  The number of moves to move the snake.
    */
   public move(numMoves:number){
-    if(this.currentDirection === 0) {this.currentPosition = new Point(this.position.x, this.position.y + numMoves)}
-    else if(this.currentDirection === 1) {this.currentPosition = new Point(this.position.x + numMoves, this.position.y)}
-    else if(this.currentDirection === 2) {this.currentPosition = new Point(this.position.x, this.position.y - numMoves)}
-    else if( this.currentDirection === 3) {this.currentPosition = new Point(this.position.x - numMoves, this.position.y)}
+    if(this.currentDirection === 0) {this.currentParts = new Point(this.position.x, this.position.y + numMoves)}
+    else if(this.currentDirection === 1) {this.currentParts = new Point(this.position.x + numMoves, this.position.y)}
+    else if(this.currentDirection === 2) {this.currentParts = new Point(this.position.x, this.position.y - numMoves)}
+    else if( this.currentDirection === 3) {this.currentParts = new Point(this.position.x - numMoves, this.position.y)}
   }
 
   /**
@@ -52,7 +56,7 @@ class Snake{
    */
 
   public get position(){
-    return this.currentPosition
+    return this.currentParts
   }
 
   /**

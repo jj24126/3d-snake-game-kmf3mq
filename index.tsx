@@ -56,7 +56,7 @@ wm.update(1)
 display(s.position.x)
 
 const cv = new CanvasView(40)
-wm.addView = cv
+//wm.addView = cv
 wm.update(1)
 
 

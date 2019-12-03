@@ -13,8 +13,8 @@ class Snake{
    constructor(startPosition:Point, size){
     this.currentParts = [startPosition]
     this.currentDirection = 1
-    let b
-    for (b=1; b < this.currentParts.size - 1; b++) {
+  
+    for (let b=1; b < this.currentParts.size - 1; b++) {
       this.currentParts.push(new Point(startPosition.x - b, startPosition.y));
     }
   }

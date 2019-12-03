@@ -26,8 +26,11 @@ class CanvasView implements IView{
   public display(w:WorldModel){
     this.canvas.width = w.currentWidth * this.sf
     this.canvas.height = w.currentHeight * this.sf
-    this.context.fillRect(w.snake.position.x * this.sf, w.snake.position.y * this.sf, this.sf, this.sf)
-    
+
+   for(let b = 0; b < w.allSnks.length -1 ; b++){
+
+     this.context.fillRect(w.allSnks[b].position.x * this.sf, w.allSnks[b].position.y * this.sf, this.sf, this.sf)
+   }  
   }
 
 }

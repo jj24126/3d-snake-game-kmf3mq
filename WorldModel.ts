@@ -27,8 +27,14 @@ class WorldModel{
    * @param steps - Retrieve's the snake.
    */
   public update(steps){
-    this.allSnakes.move(steps)
-    if(this.allViews !== null) {this.allViews.display(this)}
+
+    for(let b = 0; b < this.allSnks.length; b++){
+      this.allSnakes[b].move(steps)
+    }
+
+    for(let b = 0; b < this.allViews.length; b++){
+     {this.allViews[b].display(this)}
+    }
   }
 
   public get allSnks() {

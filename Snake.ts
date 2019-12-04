@@ -24,10 +24,14 @@ class Snake{
    * @param numMoves -  The number of moves to move the snake.
    */
   public move(numMoves:number){
-    if(this.currentDirection === 0) {this.currentParts = new Point(this.position.x, this.position.y + numMoves)}
-    else if(this.currentDirection === 1) {this.currentParts = new Point(this.position.x + numMoves, this.position.y)}
-    else if(this.currentDirection === 2) {this.currentParts = new Point(this.position.x, this.position.y - numMoves)}
-    else if( this.currentDirection === 3) {this.currentParts = new Point(this.position.x - numMoves, this.position.y)}
+
+    for(let b = this.currentParts.length-1; b != 0; b--){
+      this.currentParts[b] = this.currentParts[b-1]
+    }
+    if(this.currentDirection === 0) {this.currentParts[0] = new Point(this.position.x, this.position.y + numMoves)}
+    else if(this.currentDirection === 1) {this.currentParts[0] = new Point(this.position.x + numMoves, this.position.y)}
+    else if(this.currentDirection === 2) {this.currentParts[0] = new Point(this.position.x, this.position.y - numMoves)}
+    else if( this.currentDirection === 3) {this.currentParts[0] = new Point(this.position.x - numMoves, this.position.y)}
   }
 
   /**
@@ -56,7 +60,7 @@ class Snake{
    */
 
   public get position(){
-    return this.currentParts
+    return this.currentParts[0]
   }
 
   /**

@@ -60,7 +60,7 @@ class Snake{
    */
 
   public get position(){
-    return this.currentParts[0]
+    return this.currentParts[0].x && this.currentParts[0].y
   }
 
   /**
@@ -68,6 +68,12 @@ class Snake{
    */
   public get direction(){
     return this.currentDirection
+  }
+
+  public didCollide(s){
+    if(this.position(this.currentParts[0]) === (this.position(this.currentParts.slice(1))))
+    {return true}
+
   }
 }
 

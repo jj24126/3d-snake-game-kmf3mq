@@ -28,6 +28,8 @@ class Snake{
     for(let b = this.currentParts.length-1; b != 0; b--){
       this.currentParts[b] = this.currentParts[b-1]
     }
+
+
     if(this.currentDirection === 0) {this.currentParts[0] = new Point(this.position.x, this.position.y + numMoves)}
     else if(this.currentDirection === 1) {this.currentParts[0] = new Point(this.position.x + numMoves, this.position.y)}
     else if(this.currentDirection === 2) {this.currentParts[0] = new Point(this.position.x, this.position.y - numMoves)}
@@ -60,7 +62,7 @@ class Snake{
    */
 
   public get position(){
-    return this.currentParts[0].x && this.currentParts[0].y
+    return this.currentParts[0]
   }
 
   /**
@@ -71,10 +73,25 @@ class Snake{
   }
 
   public didCollide(s){
-    if(this.position(this.currentParts[0]) === (this.position(this.currentParts.slice(1))))
-    {return true}
 
+    if(this.currentParts.position === (this.currentParts.slice(1)) || this.currentParts.position === s.slice(0))
+
+      {return true}
+    
+    /*if(this.position(this.currentParts[0]) === (this.position(this.currentParts.slice(1))) || 
+        this.position(s.slice(0)))
+
+      {return true}*/
   }
+
+  /**
+   * Returns the whole snake, including the head
+   */
+
+  public get allParts(){
+   return this.currentParts
+  }
+
 }
 
 

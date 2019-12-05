@@ -7,6 +7,7 @@ import Snake from './Snake';
 import SnakeTests from './SnakeTests';
 import WorldModel from './WorldModel'
 import CanvasView from './CanvasView'
+import Point from './Point'
 
 interface AppProps { }
 interface AppState {
@@ -47,7 +48,7 @@ render(<App />, document.getElementById('root'));
 // Add display statements below
 display("Let's get started with React TypeScript!");
 
-const s = new Snake()
+const s = new Snake(new Point(4,0),4)
 display(s.position.x)
 const wm = new WorldModel()
 wm.update(1)

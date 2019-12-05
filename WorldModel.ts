@@ -27,7 +27,8 @@ class WorldModel{
    * @param steps - Retrieve's the snake.
    */
   public update(steps){
-
+    let collidedSnks = []
+    
     for(let b = 0; b < this.allSnks.length; b++){
       this.allSnakes[b].move(steps)
     }
@@ -54,6 +55,11 @@ class WorldModel{
   public get currentHeight(){
     return this.height 
   } 
+
+  /**
+   * Adds snakes to allSnakes
+   * @param s - the snake to add
+   */
 
   public addSnakes(s) {
     this.allSnakes.push(s)

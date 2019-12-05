@@ -74,7 +74,7 @@ class Snake{
 
   public didCollide(s){
 
-    if(this.currentParts.position === (this.currentParts.slice(1)) || this.currentParts.position === s.slice(0))
+    if(this.currentParts.position === (this.currentParts.slice(1)) ||                 this.currentParts.position === s.slice(0))
 
       {return true}
     

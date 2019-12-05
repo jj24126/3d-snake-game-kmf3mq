@@ -52,7 +52,8 @@ const s = new Snake(new Point(4,0),4)
 display(s.position.x)
 const wm = new WorldModel()
 wm.update(1)
-s.turnLeft
+s.turnRight
+s.move(10)
 wm.update(1)
 display(s.position.x)
 

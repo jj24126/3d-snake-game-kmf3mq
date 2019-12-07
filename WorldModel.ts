@@ -27,14 +27,24 @@ class WorldModel{
    * @param steps - Retrieve's the snake.
    */
   public update(steps){
+
     let collidedSnks = []
+
+    for(let h = 0; h < this.allSnks.length; h++){
+      if(this.allSnks[h].didCollide() && collidedSnks.includes(this.allSnks[h]) === false)
+      {collidedSnks.push(this.allSnks[h])}
+    }
+
+    for(let k = 0; k < collidedSnks.length; k++) {
+      this.allSnakes.splice(this.allSnakes.indexOf(collidedSnks[k]), 1)
+    }
     
     for(let b = 0; b < this.allSnks.length; b++){
       this.allSnakes[b].move(steps)
     }
 
-    for(let b = 0; b < this.allViews.length; b++){
-     {this.allViews[b].display(this)}
+    for(let n = 0; n < this.allViews.length; n++){
+     {this.allViews[n].display(this)}
     }
   }
 

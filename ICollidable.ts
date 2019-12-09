@@ -12,3 +12,5 @@ interface ICollidable extends IActor{
   didCollide:() => void;
 
 }
+
+export default ICollidable;

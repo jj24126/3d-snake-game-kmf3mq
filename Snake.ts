@@ -74,10 +74,21 @@ class Snake{
 
   public didCollide(s){
 
-    if(this.currentParts.position === (this.currentParts.slice(1)) ||                 this.currentParts.position === s.slice(0))
+    if(this.currentParts === s )
+    for(let b = this.currentParts.length - 1; b != 0; b--){
+      if(this.currentParts.position === this.currentParts[b]) {return true}
+      else if(this.currentParts.position != this.currentParts[b] && b === 1){return false}
+    }
+    else if(this.currentParts != s)
+    for(let b = s.currentParts.length - 1; b >= 0; b--){
+      if(this.currentParts.position === s.currentParts[b]) {return true}
+      else if(this.currentParts.position != s.currentParts[b] && b === 0) {return false}
+    }
+
+   /* if(this.currentParts.position === (this.currentParts.slice(1)) ||                 this.currentParts.position === s.slice(0))
 
       {return true}
-    
+    */
     /*if(this.position(this.currentParts[0]) === (this.position(this.currentParts.slice(1))) || 
         this.position(s.slice(0)))
 

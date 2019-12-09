@@ -9,6 +9,6 @@ import IActor from './IActor'
 
 interface ICollidable extends IActor{
 
-  didCollidable:() => void;
+  didCollide:() => void;
 
 }

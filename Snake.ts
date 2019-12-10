@@ -138,7 +138,16 @@ class Snake implements ICollidable{
   }
 
   public grow(){
-    if(this.currentParts.direction = 0){this.currentParts.push(new Point(this.currentParts[this.currentParts.length-1].x, this.currentParts[this.currentParts.length-1].y+1))}
+
+    let tailEnd = this.currentParts[this.currentParts.length - 1];
+
+    if(this.currentParts.direction = 0){this.currentParts.push(new Point(tailEnd.x, tailEnd.y+1))}
+
+    else if(this.currentParts.direction = 1) {this.currentParts.push(new Point(tailEnd.x-1, tailEnd.y))}
+
+    else if(this.currentParts.direction = 2) {this.currentParts.push(new Point(tailEnd.x, tailEnd.y-1))}
+
+    else if(this.currentParts.direction = 3) {this.currentParts.push(new Point(tailEnd.x+1, tailEnd.y))}
   }
 }
 

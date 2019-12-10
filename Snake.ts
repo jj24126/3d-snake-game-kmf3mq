@@ -1,18 +1,21 @@
 import display from './display';
 import Point from './Point';
+import ICollidable from './ICollidable'
 
 // place your code on line 5 above the export statement below
 
 /**Class representing a Snake */
-class Snake{
+class Snake implements ICollidable{
   private currentParts
   private currentDirection:number
+  private isCurrentlyActive
   /**
    * Creates a Snake
    */
    constructor(startPosition:Point, size){
     this.currentParts = [startPosition]
     this.currentDirection = 1
+    this.isCurrentlyActive = true
   
     for (let b=1; b < this.currentParts.size - 1; b++) {
       this.currentParts.push(new Point(startPosition.x - b, startPosition.y));
@@ -74,15 +77,21 @@ class Snake{
 
   public didCollide(s){
 
-    if(this.currentParts === s )
-    for(let b = this.currentParts.length - 1; b != 0; b--){
+    if(this.currentParts.type != "snake") {
+
+    }
+
+    else if(this.currentParts === s ){
+      for(let b = this.currentParts.length - 1; b != 0; b--){
       if(this.currentParts.position === this.currentParts[b]) {return true}
       else if(this.currentParts.position != this.currentParts[b] && b === 1){return false}
+      }
     }
-    else if(this.currentParts != s)
-    for(let b = s.currentParts.length - 1; b >= 0; b--){
+    else if(this.currentParts != s){
+     for(let b = s.currentParts.length - 1; b >= 0; b--){
       if(this.currentParts.position === s.currentParts[b]) {return true}
       else if(this.currentParts.position != s.currentParts[b] && b === 0) {return false}
+     }
     }
 
    /* if(this.currentParts.position === (this.currentParts.slice(1)) ||                 this.currentParts.position === s.slice(0))
@@ -103,6 +112,34 @@ class Snake{
    return this.currentParts
   }
 
+  
+  /**
+   * Calls the move method
+   */
+
+  public update(){
+    this.move
+  }
+
+  /**
+   * Sets the isCurrentlyActive property to false
+   */
+
+  public die(){
+    this.isCurrentlyActive = false
+  }
+
+  public get isActive(){
+    return this.isCurrentlyActive
+  }
+
+  public get type(){
+    return "snake"
+  }
+
+  public grow(){
+    if(this.currentParts.direction = 0){this.currentParts.push(new Point(this.currentParts[this.currentParts.length-1].x, this.currentParts[this.currentParts.length-1].y+1))}
+  }
 }
 
 

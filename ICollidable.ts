@@ -1,6 +1,4 @@
 
-
-
 import IActor from './IActor'
 
 /**

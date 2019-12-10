@@ -1,6 +1,7 @@
 import display from './display';
 import Point from './Point';
 import ICollidable from './ICollidable'
+import IAcotr
 
 // place your code on line 5 above the export statement below
 
@@ -78,26 +79,26 @@ class Snake implements ICollidable{
   public didCollide(s){
 
     if(this.currentParts.type != "snake") {
+      this.currentParts.posiiton.equals(IActor.position)
       
 
     }
 
     else if(this.currentParts === s ){
       for(let b = this.currentParts.length - 1; b != 0; b--){
-       if(this.currentParts.position.equals(s)) {return true}
+       if(this.currentParts.position.equals(s.currentParts[b])) {return true}
       }
-      {return false}
+      return false
     }
 
     else if(this.currentParts != s){
      for(let b = s.currentParts.length - 1; b >= 0; b--){
       if(this.currentParts.position === s.currentParts[b]) {return true}
      }
-     {return false}
+     return false
      
     }
 
-   // else if(this.currentParts.position != s.currentParts[b] && b === 0)
     /*this.currentParts.position === this.currentParts[b]*/
   }
 

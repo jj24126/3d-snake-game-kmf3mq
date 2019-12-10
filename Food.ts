@@ -32,3 +32,5 @@ class Food implements IActor{
   }
 
 }
+
+export default Food;

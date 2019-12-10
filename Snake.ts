@@ -78,30 +78,27 @@ class Snake implements ICollidable{
   public didCollide(s){
 
     if(this.currentParts.type != "snake") {
+      
 
     }
 
     else if(this.currentParts === s ){
       for(let b = this.currentParts.length - 1; b != 0; b--){
-      if(this.currentParts.position === this.currentParts[b]) {return true}
-      else if(this.currentParts.position != this.currentParts[b] && b === 1){return false}
+       if(this.currentParts.position.equals(s)) {return true}
       }
+      {return false}
     }
+
     else if(this.currentParts != s){
      for(let b = s.currentParts.length - 1; b >= 0; b--){
       if(this.currentParts.position === s.currentParts[b]) {return true}
-      else if(this.currentParts.position != s.currentParts[b] && b === 0) {return false}
      }
+     {return false}
+     
     }
 
-   /* if(this.currentParts.position === (this.currentParts.slice(1)) ||                 this.currentParts.position === s.slice(0))
-
-      {return true}
-    */
-    /*if(this.position(this.currentParts[0]) === (this.position(this.currentParts.slice(1))) || 
-        this.position(s.slice(0)))
-
-      {return true}*/
+   // else if(this.currentParts.position != s.currentParts[b] && b === 0)
+    /*this.currentParts.position === this.currentParts[b]*/
   }
 
   /**

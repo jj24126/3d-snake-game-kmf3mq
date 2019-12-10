@@ -29,6 +29,7 @@ class Point{
     return this.ycoord
   }
 
+  
   public equals(p) {
     if(p.x === this.x && p.y ===this.y) {return true}
   }

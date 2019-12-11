@@ -9,6 +9,8 @@ import WorldModel from './WorldModel'
 import CanvasView from './CanvasView'
 import Point from './Point'
 import GameController from './GameController'
+import HumanPlayer from './HumanPlayer'
+import SnakeController from './SnakeController'
 
 interface AppProps { }
 interface AppState {
@@ -63,7 +65,8 @@ wm.addView(cv)
 wm.addSnakes(snk1)
 wm.update(1)
 
-const GC = new GameController()
+const GC = new GameController(wm)
+GC.p1(new SnakeController(wm, snk1))
 
 
 

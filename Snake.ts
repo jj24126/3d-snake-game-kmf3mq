@@ -3,7 +3,7 @@ import Point from './Point';
 import ICollidable from './ICollidable'
 import IActor from './IActor'
 
-// place your code on line 5 above the export statement below
+
 
 /**Class representing a Snake */
 class Snake implements ICollidable{

@@ -26,15 +26,13 @@ class WorldModel{
    */
   public update(steps){
 
-    //I wasn't sure why the includes method on arrays wasn't working, I checked online and it is supposed to work.
-
     let collidedSnks = []
 
-    /*for(let h = 0; h < this.allSnks.length; h++){
-      if(this.allSnks[h].didCollide(this.allSnks) && collidedSnks.includes(this.allSnks[h]) === false)
+    for(let h = 0; h < this.allSnks.length; h++){
+      if(this.allSnks[h].didCollide(this.allSnks) && collidedSnks.some(this.allSnks[h]) === false)
       {collidedSnks.push(this.allSnks[h])}
     }
-    */
+    
     for(let k = 0; k < collidedSnks.length; k++) {
       this.allSnakes.splice(this.allSnakes.indexOf(collidedSnks[k]), 1)
     }

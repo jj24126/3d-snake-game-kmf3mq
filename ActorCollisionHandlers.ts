@@ -1,15 +1,15 @@
-
-
-
-
+/**Class representing ActionCollisionHandlers */
 class ActorCollisionHandlers{
-  pairs
+  private pairs
 
+  /**
+   * Creates ActorCollisionHandlers
+   */
   constructor(){
     this.pairs = new Map()
   }
 
-  toKey(colliderType:string, collidedType:string) {
+  public toKey(colliderType:string, collidedType:string) {
 
   }
 

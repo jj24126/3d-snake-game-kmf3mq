@@ -84,7 +84,9 @@ class Snake implements ICollidable{
   public didCollide(s){
 
     if(this.currentParts.type != "snake") {
-     // if(this.currentParts.posiiton.equals(IActor.position)){return true}
+      // I couldn't figure out how to get this part to work.
+
+     /* if(this.currentParts.posiiton.equals(IActor.position)){return true}*/
     }
     
     else if(this.currentParts === s) {

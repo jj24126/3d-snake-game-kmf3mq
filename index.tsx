@@ -8,6 +8,7 @@ import SnakeTests from './SnakeTests';
 import WorldModel from './WorldModel'
 import CanvasView from './CanvasView'
 import Point from './Point'
+import GameController from './GameController'
 
 interface AppProps { }
 interface AppState {
@@ -48,17 +49,22 @@ render(<App />, document.getElementById('root'));
 // Add display statements below
 display("Let's get started with React TypeScript!");
 
-const s = new Snake(new Point(4,0),4)
-display(s.position.x)
+const snk1 = new Snake(new Point(4,0),4)
+display(snk1.position.x)
 const wm = new WorldModel()
 wm.update(1)
-s.turnRight
-s.move(10)
+snk1.turnRight()
+snk1.move(10)
 wm.update(1)
-display(s.position.x)
+display(snk1.position.x)
 
-const cv = new CanvasView(40)
-//wm.addView = cv
+const cv = new CanvasView(100)
+wm.addView(cv)
+wm.addSnakes(snk1)
 wm.update(1)
+
+const GC = new GameController()
+
+
 
 

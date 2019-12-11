@@ -30,11 +30,11 @@ class WorldModel{
 
     let collidedSnks = []
 
-    for(let h = 0; h < this.allSnks.length; h++){
+    /*for(let h = 0; h < this.allSnks.length; h++){
       if(this.allSnks[h].didCollide(this.allSnks) && collidedSnks.includes(this.allSnks[h]) === false)
       {collidedSnks.push(this.allSnks[h])}
     }
-
+    */
     for(let k = 0; k < collidedSnks.length; k++) {
       this.allSnakes.splice(this.allSnakes.indexOf(collidedSnks[k]), 1)
     }

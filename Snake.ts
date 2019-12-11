@@ -84,9 +84,9 @@ class Snake implements ICollidable{
   public didCollide(s){
 
     if(this.currentParts.type != "snake") {
-      if(this.currentParts.posiiton.equals(IActor.position)){return true}
+     // if(this.currentParts.posiiton.equals(IActor.position)){return true}
     }
-
+    
     else if(this.currentParts === s) {
      if(this.currentParts.slice(1).some(this.currentParts.position.equals(this.currentParts.slice(1))))
       {return true}
@@ -112,7 +112,7 @@ class Snake implements ICollidable{
      return false
      
     }
-*/
+  */
   }
 
   /**

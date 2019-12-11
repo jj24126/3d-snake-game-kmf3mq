@@ -11,6 +11,7 @@ import Point from './Point'
 import GameController from './GameController'
 import HumanPlayer from './HumanPlayer'
 import SnakeController from './SnakeController'
+import Player from './Player'
 
 interface AppProps { }
 interface AppState {
@@ -51,7 +52,7 @@ render(<App />, document.getElementById('root'));
 // Add display statements below
 display("Let's get started with React TypeScript!");
 
-const snk1 = new Snake(new Point(4,0),4)
+const snk1 = new Snake(new Point(4,3),4)
 display(snk1.position.x)
 const wm = new WorldModel()
 wm.update(1)
@@ -66,7 +67,6 @@ wm.addSnakes(snk1)
 wm.update(1)
 
 const GC = new GameController(wm)
-GC.p1(new SnakeController(wm, snk1))
 
 
 

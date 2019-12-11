@@ -14,12 +14,10 @@ class WorldModel{
  * @param s - Represents the snake class
  */
  constructor(/*s:Snake*/){
-    //this.snk = s
     this.allSnakes = []
     this.width = 40
     this.height = 40
     this.allViews = []
-    //this.myView = null
   }
 
   /**
@@ -28,10 +26,12 @@ class WorldModel{
    */
   public update(steps){
 
+    //I wasn't sure why the includes method on arrays wasn't working, I checked online and it is supposed to work.
+
     let collidedSnks = []
 
     for(let h = 0; h < this.allSnks.length; h++){
-      if(this.allSnks[h].didCollide() && collidedSnks.includes(this.allSnks[h]) === false)
+      if(this.allSnks[h].didCollide(this.allSnks) && collidedSnks.includes(this.allSnks[h]) === false)
       {collidedSnks.push(this.allSnks[h])}
     }
 
@@ -48,6 +48,9 @@ class WorldModel{
     }
   }
 
+  /**
+   * Returns this.allSnakes
+   */
   public get allSnks() {
     return this.allSnakes
   }
@@ -75,16 +78,14 @@ class WorldModel{
     this.allSnakes.push(s)
   }
 
+  /**
+   * Adds views to allViews
+   * @param v -the view to add
+   */
+
   public addView(v) {
     this.allViews.push(v)
   }
-
-
- /* public set View(v:IView){
-    this.myView = v
-
-  }*/
-
   
 }
 

@@ -10,7 +10,6 @@ class Snake implements ICollidable{
   private currentParts
   private currentDirection:number
   private isCurrentlyActive
-  private Actor
   /**
    * Creates a Snake
    */
@@ -88,8 +87,18 @@ class Snake implements ICollidable{
       if(this.currentParts.posiiton.equals(IActor.position)){return true}
     }
 
+    else if(this.currentParts === s) {
+     if(this.currentParts.slice(1).some(this.currentParts.position.equals(this.currentParts.slice(1))))
+      {return true}
+    }
 
-    else if(this.currentParts === s ){
+    else if(this.currentParts != s){
+      if(s.some(this.currentParts.position.equals(s))) {return true}
+    }
+
+  // I wasn't completely sure if the higher order function was done peoperly, so I left the older implmentatation below.
+
+  /*  else if(this.currentParts === s ){
       for(let b = this.currentParts.length - 1; b != 0; b--){
        if(this.currentParts.position.equals(s.currentParts[b])) {return true}
       }
@@ -98,13 +107,12 @@ class Snake implements ICollidable{
 
     else if(this.currentParts != s){
      for(let b = s.currentParts.length - 1; b >= 0; b--){
-      if(this.currentParts.position === s.currentParts[b]) {return true}
+      if(this.currentParts.position.equals(s.currentParts[b])) {return true}
      }
      return false
      
     }
-
-    /*this.currentParts.position === this.currentParts[b]*/
+*/
   }
 
   /**

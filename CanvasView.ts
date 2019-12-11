@@ -29,13 +29,10 @@ class CanvasView implements IView{
 
    for(let b = 0; b < w.allSnks.length - 1 ; b++){
      for(let n = 0; n < w.allSnks[n].length - 1; n++) {
-
-        this.context.fillRect(w.allSnks[b].allParts[n].x * this.sf, w.allSnks[b].allParts[n].y * this.sf, this.sf, this.sf)
+       this.context.fillRect(w.allSnks[b].allParts[n].x * this.sf, w.allSnks[b].allParts[n].y * this.sf, this.sf, this.sf)
      }
-
-    /* this.context.fillRect(w.allSnks[b].position.x * this.sf, w.allSnks[b].position.y * this.sf, this.sf, this.sf)*/
+     /* this.context.fillRect(w.allSnks[b].position.x * this.sf, w.allSnks[b].position.y * this.sf, this.sf, this.sf)*/
    }
-  
   }
 
 }

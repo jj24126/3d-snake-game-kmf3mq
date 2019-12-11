@@ -1,10 +1,13 @@
 import IInputHandler from './IInputHandler'
 
-
+/** Class representing a LRKeyInputHandler */
 class LRKeyInputHandler implements IInputHandler{
   private wasLeftArrowPushed:Boolean
   private wasRightArrowPushed:Boolean
 
+  /**
+   * Creates a new LRKeyInputHandler
+   */
   constructor(){
     this.wasLeftArrowPushed = false
     this.wasRightArrowPushed = false;
@@ -16,17 +19,31 @@ class LRKeyInputHandler implements IInputHandler{
     })
   }
 
+  /**
+   * Returns the property wasLeftArrowPushed
+   */
   public madeLeftMove(){
     return this.wasLeftArrowPushed
   }
+
+  /**
+   * Returns the property wasRightArrowPushed
+   */
 
   public madeRightMove(){
     return this.wasRightArrowPushed
   }
 
+  /**
+   * sets wasLeftArrowPushed to false
+   */
   public resetLeftMove(){
     this.wasLeftArrowPushed = false
   }
+
+  /**
+   * wasRightArrowPushed
+   */
 
   public resetRightMove(){
     this.wasRightArrowPushed = false

@@ -2,7 +2,7 @@
 import IActor from './IActor'
 
 /**
- * interface for collidable
+ * Interface for collidable
  */
 
 interface ICollidable extends IActor{

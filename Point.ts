@@ -29,7 +29,10 @@ class Point{
     return this.ycoord
   }
 
-  
+  /**
+   *  Returns true when this point's x & y are the same as p'same
+   * @ parsm p - the p value
+   */  
   public equals(p) {
     if(p.x === this.x && p.y ===this.y) {return true}
   }

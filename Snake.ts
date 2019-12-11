@@ -1,7 +1,7 @@
 import display from './display';
 import Point from './Point';
 import ICollidable from './ICollidable'
-import IAcotr
+import IActor from './IActor'
 
 // place your code on line 5 above the export statement below
 
@@ -10,6 +10,7 @@ class Snake implements ICollidable{
   private currentParts
   private currentDirection:number
   private isCurrentlyActive
+  private Actor
   /**
    * Creates a Snake
    */
@@ -76,13 +77,17 @@ class Snake implements ICollidable{
     return this.currentDirection
   }
 
+  /**
+   * returns true when this Snake's head collides with s
+   * @param s - this snake or another snake
+   */
+
   public didCollide(s){
 
     if(this.currentParts.type != "snake") {
-      this.currentParts.posiiton.equals(IActor.position)
-      
-
+      if(this.currentParts.posiiton.equals(IActor.position)){return true}
     }
+
 
     else if(this.currentParts === s ){
       for(let b = this.currentParts.length - 1; b != 0; b--){
@@ -127,14 +132,24 @@ class Snake implements ICollidable{
     this.isCurrentlyActive = false
   }
 
+  /**
+   * Returns the isCurrentlyActive property 
+   */
+
   public get isActive(){
     return this.isCurrentlyActive
   }
 
+  /**
+   * Returns the string literal "snake"
+   */
   public get type(){
     return "snake"
   }
 
+  /**
+   * Adds another point to the end of the snake
+   */
   public grow(){
 
     let tailEnd = this.currentParts[this.currentParts.length - 1];

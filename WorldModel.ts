@@ -15,8 +15,8 @@ class WorldModel{
  */
  constructor(/*s:Snake*/){
     this.allSnakes = []
-    this.width = 40
-    this.height = 40
+    this.width = 100
+    this.height = 100
     this.allViews = []
   }
 

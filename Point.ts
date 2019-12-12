@@ -30,7 +30,7 @@ class Point{
   }
 
   /**
-   *  Returns true when this point's x & y are the same as p'same
+   *  Returns true when this point's x & y are the same as p's 
    * @ parsm p - the p value
    */  
   public equals(p) {

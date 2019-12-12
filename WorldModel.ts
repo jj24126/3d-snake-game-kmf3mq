@@ -13,10 +13,10 @@ class WorldModel{
  * Creates a new World Model
  * @param s - Represents the snake class
  */
- constructor(/*s:Snake*/){
+ constructor(){
     this.allSnakes = []
-    this.width = 100
-    this.height = 100
+    this.width = 10
+    this.height = 10
     this.allViews = []
   }
 

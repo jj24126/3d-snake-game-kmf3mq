@@ -26,8 +26,8 @@ describe("WorldModel", function(){
     let snk1 = new Snake(new Point(4,0),4)
     w.addSnakes(snk1)
     w.update(4)
-    expect(w.allSnks[0].position).toBe(8,0))
-  })
+    expect(w.allSnks[0].position).toBe(8,0)
+    })
 
 })
 

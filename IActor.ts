@@ -7,9 +7,6 @@ import Point from './Point'
 interface IActor {
   position:Point
 
-  
-
-
   update:() => void;
 }
 
